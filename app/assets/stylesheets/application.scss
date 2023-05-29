@@ -10,3 +10,27 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.logo{
+  border-style: groove;
+  border-color: lightblue;
+  border-width: 4px;
+  padding: 1px;
+  border-radius: 1px;
+}
+
+.container-fluid{
+  background-color: grey;
+}
+
+.navbar-lewagon{
+  background-color: lightblue;
+}
+
+body{
+  background-color: white;
+}
+
+.nav-link{
+  color: lightblue;
+}
