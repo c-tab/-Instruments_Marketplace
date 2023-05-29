@@ -1,0 +1,10 @@
+<h2>Lend an instrument</h2>
+<%= simple_form_for(instrument) do |f| %>
+  <%= f.input :type %>
+  <%= f.input :price %>
+  <%= f.input :serial %>
+  <%= f.submit %>
+<% end %>
+
+
+<%= link_to "Go home", instruments_path %>
