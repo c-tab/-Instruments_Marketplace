@@ -1,6 +1,7 @@
+<%= link_to "Add an instrument", new_instrument_path %>
 <ol>
 <% @instruments.each do |instrument|  %>
-<li><%= instrument.type %></li>
+<li><%= instrument.category %></li>
 <li><%= instrument.price %></li>
-<%= link_to "Go to this instrument's page", instrument_path(@instrument) %>
+<%= link_to "Go to this instrument's page", instrument_path(instrument) %>
 <% end %>

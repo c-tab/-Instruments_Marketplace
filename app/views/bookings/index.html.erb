@@ -2,7 +2,7 @@
 <%= @booking.each do |book|%>
 <p>From:<%= book.booking_startdate %></p>
 <p>To:<%= book.booking_enddate %></p>
-<p><%= book.instrument.type %></p>
+<p><%= book.instrument.category %></p>
 <p><%= book.instrument.price %></p>
 <% end %>
 <h3><%= link_to "Back to Menu", instruments_path %></h3>

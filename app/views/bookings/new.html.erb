@@ -8,7 +8,7 @@
 <br>
 <div class="details">
  <% @booking.instrument.each do |book| %>
- <p>-<%= book.type %>: <%= book.price %>per day<p>
+ <p>-<%= book.category %>: <%= book.price %>per day<p>
  <% end %>
 </div>
 <h3><%= link_to "View all my bookings", bookings_path %></h3>

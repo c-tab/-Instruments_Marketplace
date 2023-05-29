@@ -26,7 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_125327) do
   end
 
   create_table "instruments", force: :cascade do |t|
-    t.string "type"
+    t.string "category"
     t.integer "price"
     t.integer "serial"
     t.bigint "user_id", null: false
