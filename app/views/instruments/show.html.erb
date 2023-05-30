@@ -1,7 +1,7 @@
 <div class="instrumentdetail">
   <h2> <%= @instrument.category %> </h2>
-  <h3> <%= @instrument.price %> </h3>
-  <h4><%= @instrument.serial %></h4>
+  <h3>$<%= @instrument.price %> </h3>
+  <h4>#<%= @instrument.serial %></h4>
 </div>
 <%= link_to "Go back", instruments_path, class:"homecontent" %>
 <%= link_to "Proceed to booking", new_instrument_booking_path(@instrument), class:"homecontent" %>

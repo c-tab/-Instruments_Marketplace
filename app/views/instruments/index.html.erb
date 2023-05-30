@@ -1,5 +1,5 @@
 <div class="instrumentheader">
-<h2>All available instruments</h2>
+<h2 class="homecontent">All available instruments</h2>
 </div>
 
 <div class="allinstruments">
@@ -7,9 +7,8 @@
 
   <% @instruments.each do |instrument|  %>
     <div class="instrumentdetail">
-      <ol>
-      <li><%= instrument.category %></li>
-      <li><%= instrument.price %></li>
+      <p><%= instrument.category %></p>
+      <p>$<%= instrument.price %></p>
       <%= link_to "Go to this instrument's page", instrument_path(instrument)%>
     </div>
   <% end %>
