@@ -1,5 +1,5 @@
-<h2>My bookings</h2>
-<%= @booking.each do |book|%>
+<h2>My Bookings</h2>
+<% @bookings.each do |book|%>
 <p>From:<%= book.booking_startdate %></p>
 <p>To:<%= book.booking_enddate %></p>
 <p><%= book.instrument.category %></p>
