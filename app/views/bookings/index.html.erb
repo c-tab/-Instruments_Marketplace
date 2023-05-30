@@ -1,6 +1,4 @@
-
-<h2>My Bookings</h2>
-<%= link_to "Back to Menu", instruments_path, class:"homecontent" %>
+<h2 class="homecontent">My Bookings</h2>
 
 <% @bookings.each do |book|%>
   <div class="instrumentdetail">
@@ -8,7 +6,8 @@
   <p>From:<%= book.booking_startdate %></p>
   <p>To:<%= book.booking_enddate %></p>
   <p><%= book.instrument.category %></p>
-  <p><%= book.instrument.price %></p>
+  <p>$<%= book.instrument.price %> per day</p>
   </div>
   <% end %>
 </div>
+<%= link_to "Back to Menu", instruments_path, class:"homecontent" %>
