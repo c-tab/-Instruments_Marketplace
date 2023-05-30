@@ -1,4 +1,5 @@
 <div class="instrumentdetail">
+<%= cl_image_tag @instrument.photo.key, height: 230, width: 280, crop: :fill %>
   <h2> <%= @instrument.category %> </h2>
   <h3>$<%= @instrument.price %> </h3>
   <h4>#<%= @instrument.serial %></h4>
