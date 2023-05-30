@@ -1,10 +1,10 @@
-<h2 class="homecontent">My Bookings</h2>
+<h2 class="homecontent">My bookings</h2>
 
 <% @bookings.each do |book|%>
   <div class="instrumentdetail">
 <div class="bookingdetail">
-  <p>From:<%= book.booking_startdate %></p>
-  <p>To:<%= book.booking_enddate %></p>
+  <p>From: <%= book.booking_startdate %></p>
+  <p>To: <%= book.booking_enddate %></p>
   <p><%= book.instrument.category %></p>
   <p>$<%= book.instrument.price %> per day</p>
   </div>

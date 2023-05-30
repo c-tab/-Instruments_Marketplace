@@ -7,10 +7,11 @@
 
   <% @instruments.each do |instrument|  %>
     <div class="instrumentdetail">
+
     <% if instrument.photo.key %>
       <%= cl_image_tag instrument.photo.key, height: 230, width: 280, crop: :fill %>
     <% end %>
-      <p><%= instrument.category %></p>
+      <p><strong><%= instrument.category %></strong></p>
       <p>$<%= instrument.price %></p>
       <%= link_to "Go to this instrument's page", instrument_path(instrument)%>
     </div>
