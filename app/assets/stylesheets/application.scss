@@ -68,6 +68,12 @@ body{
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.106);
+  transition: transform 0.3s ease;
+}
+
+.instrument-link {
+  text-decoration: none;
+  color: black;
 }
 
 .titlecard {
@@ -75,4 +81,8 @@ body{
   background-size: cover;
   height: 77vh;
   background-position: center;
+}
+
+.instrumentdetail:hover {
+  transform: scale(1.1);
 }

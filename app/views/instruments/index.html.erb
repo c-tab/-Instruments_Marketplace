@@ -6,11 +6,12 @@
 
 
   <% @instruments.each do |instrument|  %>
-    <div class="instrumentdetail">
-      <p><%= instrument.category %></p>
-      <p>$<%= instrument.price %></p>
-      <%= link_to "Go to this instrument's page", instrument_path(instrument)%>
-    </div>
+    <a href="<%= instrument_path(instrument) %>" class="instrument-link">
+      <div class="instrumentdetail">
+        <p><%= instrument.category %></p>
+        <p>$<%= instrument.price %></p>
+      </div>
+    </a>
   <% end %>
 </div>
 <%= link_to "Add an instrument", new_instrument_path, class:"homecontent" %>
