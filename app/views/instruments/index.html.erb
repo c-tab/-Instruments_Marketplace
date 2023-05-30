@@ -1,7 +1,7 @@
-<%= link_to "Add an instrument", new_instrument_path %>
+<%= link_to "Add an instrument", new_instrument_path, class:"homecontent" %>
 <ol>
 <% @instruments.each do |instrument|  %>
 <li><%= instrument.category %></li>
 <li><%= instrument.price %></li>
-<%= link_to "Go to this instrument's page", instrument_path(instrument) %>
+<%= link_to "Go to this instrument's page", instrument_path(instrument)%>
 <% end %>
