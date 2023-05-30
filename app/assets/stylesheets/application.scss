@@ -29,7 +29,7 @@
 
 body{
   background-image: url('https://img.freepik.com/free-vector/musical-instrument-set_74855-5898.jpg?w=2000');
-
+  // background-image: '/home/clemente/code/Cleelele/-Instruments_Marketplace/app/assets/images/background.png';
 }
 
 .nav-link{
@@ -46,4 +46,21 @@ body{
   display: inline-block;
   border-radius: 5px;
   margin: 10px;
+}
+
+.allinstruments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.instrument {
+  width: 350px;
+  height: 300px;
+  background-color: white;
+  padding: 10px;
+  margin: 50px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.275);
+  border-radius: 5px;
 }
