@@ -1,14 +1,10 @@
 <div class="new-booking">
-  <%= simple_form_for[@instrument, @booking] do |f| %>
-    <%= f.date :booking_startdate %>
-    <%= f.date :booking_enddate %>
+  <%= simple_form_for [@instrument, @booking] do |f| %>
+    <%= f.input :booking_startdate %>
+    <%= f.input :booking_enddate %>
     <%= f.submit %>
   <% end %>
 </div>
 <br>
-<div class="details">
- <% @booking.instrument.each do |book| %>
- <p>-<%= book.category %>: <%= book.price %>per day<p>
- <% end %>
-</div>
-<h3><%= link_to "View all my bookings", bookings_path %></h3>
+
+<%= link_to "View all my bookings", bookings_path, class:"homecontent" %>

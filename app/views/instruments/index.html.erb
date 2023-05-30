@@ -1,12 +1,13 @@
-<%= link_to "Add an instrument", new_instrument_path %>
+
+<%= link_to "Add an instrument", new_instrument_path, class:"homecontent" %>
 <div class="allinstruments">
-<% @instruments.each do |instrument|  %>
-  <div class="instrument">
-    <ol>
-        <li><%= instrument.category %></li>
-        <li><%= instrument.price %></li>
-        <%= link_to "Go to this instrument's page", instrument_path(instrument) %>
-    </ol >
-  </div>
-<% end %>
+  <% @instruments.each do |instrument|  %>
+    <div class="instrument">
+      <ol>
+          <li><%= instrument.category %></li>
+          <li><%= instrument.price %></li>
+          <%= link_to "Go to this instrument's page", instrument_path(instrument) %>
+      </ol >
+    </div>
+  <% end %>
 </div>
