@@ -7,7 +7,7 @@
 
   <% @instruments.each do |instrument|  %>
     <div class="instrumentdetail">
-      <p><%= instrument.category %></p>
+      <p><strong><%= instrument.category %></strong></p>
       <p>$<%= instrument.price %></p>
       <%= link_to "Go to this instrument's page", instrument_path(instrument)%>
     </div>
