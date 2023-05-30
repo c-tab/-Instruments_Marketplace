@@ -28,7 +28,8 @@
 }
 
 body{
-  background-image: url('https://img.freepik.com/free-vector/musical-instrument-set_74855-5898.jpg?w=2000');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.285) 100%), url('https://img.freepik.com/free-vector/musical-instrument-set_74855-5898.jpg?w=2000');
+  min-height: 100vh;
 }
 
 .nav-link{
@@ -44,5 +45,27 @@ body{
   text-decoration: none;
   display: inline-block;
   border-radius: 5px;
-  margin: 10px;
+  margin: 20px;
+}
+
+.instrumentheader{
+  padding: 20px;
+  color: WHITE
+}
+
+.allinstruments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.instrumentdetail {
+  width: 300px;
+  height: 250px;
+  padding: 15px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.106);
 }
