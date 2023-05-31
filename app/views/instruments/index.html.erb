@@ -8,7 +8,10 @@
   <% @instruments.each do |instrument|  %>
     <a href="<%= instrument_path(instrument) %>" class="instrument-link">
       <div class="instrumentdetail">
-        <p><%= instrument.category %></p>
+           <% if instrument.photo.key %>
+           <%= cl_image_tag instrument.photo.key, height: 230, width: 280, crop: :fill %>
+           <% end %>
+        <p><strong><%= instrument.category %></strong></p>
         <p>$<%= instrument.price %></p>
       </div>
     </a>
