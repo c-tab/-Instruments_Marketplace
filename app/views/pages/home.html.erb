@@ -1,13 +1,15 @@
-<h1 class="homecontent" style="justify-content: center;
-    display: flex">Major Instrument Marketplace</h1>
-<br>
+<!--<h1 class="homecontent" style="justify-content: center;
+    display: flex">InstruRental</h1> -->
+
 <div class="titlecard">
-  <div class="homecontent">
-    <h2><strong> Rent, Lend and More</strong></h2>
+  <div class="homecontent3">
+    <h2><strong> Rent, Lend and Play</strong></h2>
     <br>
-    <p>Need an instrument? <strong> <%= link_to "Rent", instruments_path%></strong></p>
-    <p>Have a spare instrument? <strong> <%= link_to "Lend", new_instrument_path %> </strong> </p>
+    <div class="homelink">
+      <p><%= link_to "Need an instrument? Click here", instruments_path %></p>
+    </div>
+    <div class="homelink">
+      <p><%= link_to "Have a spare instrument? Click here", new_instrument_path %></p>
+    </div>
   </div>
-  <br>
-  <%= link_to "Continue to Instruments", instruments_path, class:"homecontent"%>
 </div>
