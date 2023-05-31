@@ -1,8 +1,8 @@
-<div class="instrumentdetail">
+<div class="showdetail">
 
 <%= cl_image_tag @instrument.photo.key, height: 230, width: 280, crop: :fill %>
   <h2><strong> <%= @instrument.category %> </strong></h2>
-  <h3>$ <%= @instrument.price %> </h3>
+  <h3><%= @instrument.price %> €</h3>
   <h4># <%= @instrument.serial %></h4>
 
 </div>
