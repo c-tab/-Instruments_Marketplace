@@ -29,28 +29,17 @@ file9 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685523210/
 file10 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685523247/H378_Original_677__46112.1604965822_xjmzhr.jpg')
 
 puts "creating instruments"
-instrument1 = Instrument.create!(category: "triangle", price: 8, serial: 762, user: user1,)
-instrument2 = Instrument.create!(category: "trombone", price: 18, serial: 202, user: user3)
-instrument3 = Instrument.create!(category: "guitar", price: 22, serial: 403, user: user1)
-instrument4 = Instrument.create!(category: "flute", price: 18, serial: 201, user: user2)
-instrument5 = Instrument.create!(category: "bass", price: 24, serial: 303, user: user1)
-instrument6 = Instrument.create!(category: "piano", price: 38, serial: 232, user: user2)
-instrument7 = Instrument.create!(category: "saxophone", price: 99, serial: 103, user: user3)
-instrument8 = Instrument.create!(category: "trumpet", price: 38, serial: 200, user: user2)
-instrument9 = Instrument.create!(category: "drums", price: 122, serial: 603, user: user1)
-instrument10 = Instrument.create!(category: "french horn", price: 38, serial: 292, user: user2)
 
-
-#instrument1 = Instrument.create!(category: "triangle", price: 8, serial: 762, user: user1, address: "123 Oak Street, London, WC1X 0AA, United Kingdom")
-#instrument2 = Instrument.create!(category: "trombone", price: 18, serial: 202, user: user3, address: "456 Elm Avenue, Toronto, ON M5H 2N2, Canada")
-#instrument3 = Instrument.create!(category: "guitar", price: 22, serial: 403, user: user1, address: "789 Maple Lane, Sydney, NSW 2000, Australia")
-#instrument4 = Instrument.create!(category: "flute", price: 18, serial: 201, user: user2, address: "321 Pine Street, Berlin, 10115, Germany")
-#instrument5 = Instrument.create!(category: "bass", price: 24, serial: 303, user: user1, address: "567 Birch Road, Paris, 75001, France")
-#instrument6 = Instrument.create!(category: "piano", price: 38, serial: 232, user: user2, address: "890 Cedar Avenue, Tokyo, 100-0005, Japan")
-#instrument7 = Instrument.create!(category: "saxophone", price: 99, serial: 103, user: user3, address: "234 Willow Lane, Cape Town, 8001, South Africa")
-#instrument8 = Instrument.create!(category: "trumpet", price: 38, serial: 200, user: user2, address: "678 Walnut Street, São Paulo, SP 01310-200, Brazil")
-#instrument9 = Instrument.create!(category: "drums", price: 122, serial: 603, user: user1, address: "912 Ash Drive, Moscow, 119991, Russia")
-#instrument10 = Instrument.create!(category: "french horn", price: 38, serial: 292, user: user2, address: "345 Cherry Lane, Delhi, 110001, India")
+instrument1 = Instrument.create!(category: 'Triangle', price: 8, serial: 762, user: user1, address: '123 Oak Street, London, WC1X 0AA, United Kingdom')
+instrument2 = Instrument.create!(category: 'Trombone', price: 18, serial: 202, user: user3, address: '456 Elm Avenue, Toronto, ON M5H 2N2, Canada')
+instrument3 = Instrument.create!(category: 'Guitar', price: 22, serial: 403, user: user1, address: '789 Maple Lane, Sydney, NSW 2000, Australia')
+instrument4 = Instrument.create!(category: 'Flute', price: 18, serial: 201, user: user2, address: 'Heilwigstraße 21, Hamburg, 20249, Germany')
+instrument5 = Instrument.create!(category: 'Bass', price: 24, serial: 303, user: user1, address: 'Calle Serrano 25, 28001, Madrid, Spain')
+instrument6 = Instrument.create!(category: 'Piano', price: 38, serial: 232, user: user2, address: 'Praca Dom Luis I, 1200-109 Lisbon, Portugal')
+instrument7 = Instrument.create!(category: 'Saxophone', price: 99, serial: 103, user: user3, address: '234 Willow Lane, Cape Town, 8001, South Africa')
+instrument8 = Instrument.create!(category: 'Trumpet', price: 38, serial: 200, user: user2, address: 'Piazza di Trevi, 00187 Rome, Italy')
+instrument9 = Instrument.create!(category: 'Drums', price: 122, serial: 603, user: user1, address: 'Simmernstraße 6, 80804 München, Deutschland')
+instrument10 = Instrument.create!(category: 'French horn', price: 38, serial: 292, user: user2, address: '345 Cherry Lane, Delhi, 110001, India')
 
 instrument1.photo.attach(io: file1, filename: "nes.png", content_type: "image/jpg")
 instrument1.save!
