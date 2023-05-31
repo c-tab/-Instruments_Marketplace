@@ -30,6 +30,7 @@ file10 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685523247
 
 puts "creating instruments"
 
+
 instrument1 = Instrument.create!(category: 'Triangle', price: 8, serial: 762, user: user1, address: '123 Oak Street, London, WC1X 0AA, United Kingdom')
 instrument2 = Instrument.create!(category: 'Trombone', price: 18, serial: 202, user: user3, address: '456 Elm Avenue, Toronto, ON M5H 2N2, Canada')
 instrument3 = Instrument.create!(category: 'Guitar', price: 22, serial: 403, user: user1, address: '789 Maple Lane, Sydney, NSW 2000, Australia')
