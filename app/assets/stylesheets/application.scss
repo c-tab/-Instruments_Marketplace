@@ -11,20 +11,50 @@
 @import "components/index";
 @import "pages/index";
 
+.homelink {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.homelink p a {
+  text-decoration: none;
+  color: white;
+}
+
+.homelink:hover {
+  transform: scale(1.1);
+}
+.navbar-brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navheader {
+  color: white;
+  padding-top: 3px;
+}
 .logo{
-  border-style: solid;
-  border-color: lightblue;
-  border-width: 4px;
-  padding: 1px;
-  border-radius: 1px;
+  // border-style: solid;
+  // border-color: lightblue;
+  // border-width: 4px;
+  //padding: 1px;
+  //border-radius: 1px;
+  height: 50px;
+  //margin-right: 10px;
+  overflow: hidden;
 }
 
 .container-fluid{
-  background-color: grey;
+  background-color: rgb(136, 50, 37);
 }
 
 .navbar-lewagon{
-  background-color: lightblue;
+  background-color: rgb(136, 50, 37);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.091);
 }
 
 body{
@@ -33,11 +63,11 @@ body{
 }
 
 .nav-link {
-  color: lightblue;
+  color:white;
 }
 
 .homecontent {
-  background-color: lightblue;
+  background-color: rgb(136, 50, 37);
   border: none;
   color: rgb(255, 255, 255);
   padding: 15px 32px;
@@ -50,7 +80,7 @@ body{
 }
 
 .homecontent2 {
-  background-color: lightblue;
+  background-color: rgb(136, 50, 37);
   border: none;
   color: rgb(255, 255, 255);
   padding: 15px 32px;
@@ -59,7 +89,23 @@ body{
   display: inline-block;
   border-radius: 5px;
   margin: 20px;
-  margin-left: 10px;
+  margin-left: 15px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.106);
+  transition: transform 0.3s ease;
+}
+
+.homecontent3 {
+  background-color: rgb(136, 50, 37);
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 80px;
+  margin-left: 15px;
+  margin-bottom: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.106);
   transition: transform 0.3s ease;
 }
@@ -134,8 +180,8 @@ body{
 }
 
 .titlecard {
-  background-image: asset-url("background.png");
+  background-image: asset-url("home.jpg");
   background-size: cover;
-  height: 77vh;
-  background-position: center;
+  height: 100vh;
+  // background-position:
 }
