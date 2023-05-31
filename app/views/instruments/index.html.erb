@@ -1,5 +1,6 @@
 <div class="instrumentheader">
-<h2 class="homecontent">All available instruments</h2>
+  <h2 class="homecontent">All available instruments</h2>
+  <%= link_to "+", new_instrument_path, class:"homecontent2" %>
 </div>
 
 <div class="allinstruments">
@@ -9,12 +10,11 @@
     <a href="<%= instrument_path(instrument) %>" class="instrument-link">
       <div class="instrumentdetail">
            <% if instrument.photo.key %>
-           <%= cl_image_tag instrument.photo.key, height: 230, width: 280, crop: :fill %>
+           <%= cl_image_tag instrument.photo.key, alt: instrument.category %>
            <% end %>
         <p><strong><%= instrument.category %></strong></p>
-        <p>$<%= instrument.price %></p>
+        <p><%= instrument.price %> €</p>
       </div>
     </a>
   <% end %>
 </div>
-<%= link_to "Add an instrument", new_instrument_path, class:"homecontent" %>
