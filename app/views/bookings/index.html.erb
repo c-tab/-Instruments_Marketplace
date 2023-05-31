@@ -3,10 +3,13 @@
 <% @bookings.each do |book|%>
   <div class="instrumentdetail">
 <div class="bookingdetail">
+  <p><strong><%= book.instrument.category %></strong> #<%= book.instrument.serial %></p>
   <p>From: <%= book.booking_startdate %></p>
   <p>To: <%= book.booking_enddate %></p>
-  <p><%= book.instrument.category %></p>
   <p>€<%= book.instrument.price %> per day</p>
+  <% if book.instrument.photo.key %>
+           <%= cl_image_tag book.instrument.photo.key, alt: book.instrument.category, style: 'max-height:42%' %>
+           <% end %>
   </div>
 
 </div>
