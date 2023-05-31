@@ -5,6 +5,13 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find(params[:id])
+    @markers = @instrument.geocode.map do |instrument|
+      {
+        lat: @instrument.latitude,
+        lng: @instrument.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {instrument: @instrument})
+      }
+    end
   end
 
   def new
@@ -24,17 +31,6 @@ class InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:category, :price, :serial, :user_id, :booking_id, :photo)
+    params.require(:instrument).permit(:category, :price, :serial, :user_id, :booking_id, :photo, :address)
   end
 end
-
-# get "/instruments", to: "instruments#index" # Browse offers
-#   get "/instruments/:id", to: "instruments#show" # View instrument details
-
-#   get "/instruments/:instrument_id/bookings/new", to: "bookings#new" # Select instrument(s) - form for creating a booking
-#   post "/instruments/:instrument_id/bookings", to: "bookings#create" # Select instrument(s) - create a booking
-
-#   get "/instruments/new", to: "instruments#new" # Lend instrument - form for creating a new instrument
-#   post "/instruments", to: "instruments#create" # Lend instrument - create a new instrument
-
-#   get "/bookings", to: "bookings#index" # View all bookings

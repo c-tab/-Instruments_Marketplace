@@ -1,6 +1,8 @@
 <div class="showdetail">
 
-<%= cl_image_tag @instrument.photo.key, height: 230, width: 280, crop: :fill %>
+<% if @instrument.photo.key %>
+  <%= cl_image_tag @instrument.photo.key, height: 230, width: 280, crop: :fill %>
+<% end %>
   <h2><strong> <%= @instrument.category %> </strong></h2>
   <h3><%= @instrument.price %> €</h3>
   <h4># <%= @instrument.serial %></h4>
@@ -8,3 +10,8 @@
 </div>
 <%= link_to "Go back", instruments_path, class:"homecontent" %>
 <%= link_to "Proceed to booking", new_instrument_booking_path(@instrument), class:"homecontent" %>
+
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
