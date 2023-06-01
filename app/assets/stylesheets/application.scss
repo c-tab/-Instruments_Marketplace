@@ -13,6 +13,93 @@
 @import "components/index";
 @import "pages/index";
 
+.titlecard {
+  //background-image: asset-url("home.jpg");
+  //background-size: cover;
+  height: 100vh;
+    display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.homeleft,
+.homeright {
+  position: relative;
+  width: 50vw;
+  height: 100vh;
+  background-size: cover;
+  transition: transform 0.3s ease;
+  // border-radius: 10px;
+}
+
+.homeleft::before,
+.homeright::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.homeleft {
+  background-image: url("horn.jpg");
+  background-position-x: -50px;
+}
+
+.homeleft:hover {
+  transform: scale(1.05);
+}
+
+.homeleft:hover::before {
+  opacity: 0;
+}
+
+.homeright {
+  background-image: url("drums.jpg");
+  background-position-x: -90px;
+}
+
+.homeright:hover {
+  transform: scale(1.05);
+}
+
+.homeright:hover::before {
+  opacity: 0;
+}
+
+.textleft, .textright {
+  font-size: 1.5em; /* Adjust the font size as desired */
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  top: 33%; /* Adjust the value to position the text in the upper two-thirds of the card */
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.textleft {
+  text-align: center;
+}
+
+.textright {
+  text-align: center;
+}
+
+.titlecard a {
+  text-decoration: none;
+}
+
+.titlecard a:hover {
+  text-decoration: none;
+}
+
+
 .homelink {
   text-decoration: none;
   transition: transform 0.3s ease;
@@ -31,11 +118,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .navheader {
   color: white;
-  padding-top: 3px;
+  padding-top: 5px;
 }
 .logo{
   // border-style: solid;
@@ -43,22 +131,29 @@
   // border-width: 4px;
   //padding: 1px;
   //border-radius: 1px;
-  height: 50px;
+  height: 80px;
   //margin-right: 10px;
-  overflow: hidden;
+  // overflow: hidden;
+  transform: scale(0.6)
 }
 
 .container-fluid{
   background-color: rgb(136, 50, 37);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
-.navbar-lewagon{
-  background-color: rgb(136, 50, 37);
+.navbar-lewagon {
+  height: 40px;
+  background-color: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.116) 100%), rgb(136, 50, 37);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 4px solid rgba(0, 0, 0, 0.091);
+  //border-bottom: 4px solid rgba(0, 0, 0, 0.091);
 }
+
 
 body{
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.116) 100%); // url('https://img.freepik.com/free-vector/musical-instrument-set_74855-5898.jpg?w=2000');
@@ -218,12 +313,6 @@ body{
   color: black;
 }
 
-.titlecard {
-  background-image: asset-url("home.jpg");
-  background-size: cover;
-  height: 100vh;
-  // background-position:
-}
 
 .mapboxgl-popup {
   max-width: 200px;

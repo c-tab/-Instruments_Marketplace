@@ -2,14 +2,16 @@
     display: flex">InstruRental</h1> -->
 
 <div class="titlecard">
-  <div class="homecontent3">
-    <h2><strong> Rent, Lend and Play</strong></h2>
-    <br>
-    <div class="homelink">
-      <p><%= link_to "Need an instrument? Click here", instruments_path %></p>
-    </div>
-    <div class="homelink">
-      <p><%= link_to "Have a spare instrument? Click here", new_instrument_path %></p>
-    </div>
+<a href="<%= instruments_path %>">
+  <div class="homeleft">
+    <p class="textleft">Need an instrument? Click here</p>
   </div>
+ </a>
+
+<a href="<%= new_instrument_path %>">
+  <div class="homeright">
+    <p class="textright">Have a spare instrument? Click here</p>
+  </div>
+</a>
 </div>
+
