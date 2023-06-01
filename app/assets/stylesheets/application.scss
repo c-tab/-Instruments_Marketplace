@@ -251,6 +251,22 @@ body{
   gap: 15px;
 }
 
+.searchbar {
+  margin: 10px;
+  margin-right: 20px;
+  margin-top: 0px;
+}
+.btn-primary{
+  background-color: rgb(136, 50, 37);
+  border: none;
+  transition: transform 0.3s ease;
+}
+.btn-primary:hover{
+  background-color: rgb(136, 50, 37);
+  border: none;
+  transform: scale(1.05)
+}
+
 .instrumentdetail {
   width: 350px;
   height: 300px;
