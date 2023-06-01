@@ -3,6 +3,7 @@
   <%= link_to "+", new_instrument_path, class:"homecontent2" %>
 </div>
 
+<div class="searchbar">
 <%= form_with url: instruments_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
@@ -11,6 +12,7 @@
         %>
       <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
     <% end %>
+</div>
 
 <div class="allinstruments">
   <% @instruments.each do |instrument|  %>
