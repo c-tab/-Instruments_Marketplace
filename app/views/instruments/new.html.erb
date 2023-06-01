@@ -1,9 +1,9 @@
 <h2>Lend an instrument</h2>
 <%= simple_form_for(@instrument) do |f| %>
-  <%= f.input :category %>
-  <%= f.input :price %>
-  <%= f.input :serial %>
-  <%= f.input :address %>
+  <%= f.input :category, label: 'Instrument' %>
+  <%= f.input :price, label: 'Price in Euros'%>
+  <%= f.input :serial, label: 'Serial Number' %>
+  <%= f.input :address, required: true, label: 'Full Address: Number, Street, City, Country' %>
   <%= f.input :photo, as: :file, required: true%>
   <%= f.submit %>
 <% end %>
