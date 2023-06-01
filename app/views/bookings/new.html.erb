@@ -1,10 +1,5 @@
-<div class="new-booking">
-  <%= simple_form_for [@instrument, @booking] do |f| %>
-    <%= f.input :booking_startdate %>
-    <%= f.input :booking_enddate %>
-    <%= f.submit %>
-  <% end %>
-</div>
-<br>
-
-<%= link_to "View all my bookings", bookings_path, class:"homecontent" %>
+<%= simple_form_for [@instrument, @booking], data: { controller: 'flatpickr' } do |f| %>
+  <%= f.input :booking_startdate, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+  <%= f.input :booking_enddate, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+  <%= f.submit 'Schedule your booking' %>
+<% end %>
