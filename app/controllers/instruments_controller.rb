@@ -5,12 +5,14 @@ class InstrumentsController < ApplicationController
 
   def show
     @instrument = Instrument.find(params[:id])
+    @user = current_user
     @markers = @instrument.geocode.map do |instrument|
       {
         lat: @instrument.latitude,
         lng: @instrument.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: {instrument: @instrument})
       }
+
     end
   end
 
