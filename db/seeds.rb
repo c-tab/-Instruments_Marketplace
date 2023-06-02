@@ -16,6 +16,7 @@ puts "creating users"
 user1 = User.create!(email: "carlos.aguirre@gmail.com", password: "123456")
 user2 = User.create!(email: "guggi.schneck@gmail.com", password: "123456")
 user3 = User.create!(email: "clemens.schoenberger@gmail.com", password: "123456")
+user4 = User.create!(email: "guest@gmail.com", password: "123456")
 
 file1 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685459847/71ZO_PpPn3L_w5empe.jpg')
 file2 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685522680/616AqXnjCML._AC_UF894_1000_QL80__rck8af.jpg')
@@ -27,6 +28,11 @@ file7 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685527743/
 file8 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685527577/brass-trumpet-on-white-background_er0vi8.jpg')
 file9 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685523210/12075071_800_psiamh.jpg')
 file10 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685523247/H378_Original_677__46112.1604965822_xjmzhr.jpg')
+file11 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685694647/e5a56fc890bcd00082de183d4ce375e9_zs8ael.jpg')
+file12 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685694746/B0636_z0yzje.jpg')
+file13 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685694992/BBM_20Betsy_20-_20Burgundy_20Mist_gdlljo.jpg')
+file14 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685695051/solist-fl1s-flute2_myw7ry.jpg')
+file15 = URI.open('https://res.cloudinary.com/divn1ky6d/image/upload/v1685695234/FH601_0251_1946x_rcwhby.jpg')
 
 puts "creating instruments"
 
@@ -41,6 +47,11 @@ instrument7 = Instrument.create!(category: 'Saxophone', price: 99, serial: 103, 
 instrument8 = Instrument.create!(category: 'Trumpet', price: 38, serial: 200, user: user2, address: 'Piazza di Trevi, 00187 Rome, Italy')
 instrument9 = Instrument.create!(category: 'Drums', price: 122, serial: 603, user: user1, address: 'Simmernstraße 6, 80804 München, Deutschland')
 instrument10 = Instrument.create!(category: 'French horn', price: 38, serial: 292, user: user2, address: '345 Cherry Lane, Delhi, 110001, India')
+instrument11 = Instrument.create!(category: 'Triangle', price: 30, serial: 222, user: user4, address: 'Calle de Lagasca 22, 28001, Madrid, Spain')
+instrument12 = Instrument.create!(category: 'Guitar', price: 48, serial: 322, user: user4, address: 'Calle del Dr. Esquerdo, 70, 28007 Madrid, Spain')
+instrument13 = Instrument.create!(category: 'Bass', price: 28, serial: 492, user: user4, address: 'Sylvesterallee 7, 22525 Hamburg, Germany')
+instrument14 = Instrument.create!(category: 'Flute', price: 30, serial: 102, user: user4, address: ' Plaza Mayor, 28012 Madrid, Spain')
+instrument15 = Instrument.create!(category: 'French horn', price: 38, serial: 299, user: user4, address: 'Mittelweg 122, 20148 Hamburg, Deutschland')
 
 instrument1.photo.attach(io: file1, filename: "nes.png", content_type: "image/jpg")
 instrument1.save!
@@ -71,3 +82,18 @@ instrument9.save!
 
 instrument10.photo.attach(io: file10, filename: "nes.png", content_type: "image/png")
 instrument10.save!
+
+instrument11.photo.attach(io: file11, filename: "nes.png", content_type: "image/png")
+instrument11.save!
+
+instrument12.photo.attach(io: file12, filename: "nes.png", content_type: "image/png")
+instrument12.save!
+
+instrument13.photo.attach(io: file13, filename: "nes.png", content_type: "image/png")
+instrument13.save!
+
+instrument14.photo.attach(io: file14, filename: "nes.png", content_type: "image/png")
+instrument14.save!
+
+instrument15.photo.attach(io: file15, filename: "nes.png", content_type: "image/png")
+instrument15.save!
